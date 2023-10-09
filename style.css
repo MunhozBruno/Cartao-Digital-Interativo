@@ -32,6 +32,7 @@ body {
     background-size: cover;
     */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -78,12 +79,11 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-10%);
-  
 }
 
 .light #switch button {
   right: 0;
-  left: initial
+  left: initial;
 }
 
 #switch span {
@@ -95,10 +95,7 @@ body * {
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-
 }
-
-
 
 ul {
   list-style: none;
@@ -153,4 +150,16 @@ ul li a:hover {
 footer {
   text-align: center;
   font-size: 15px;
+}
+
+/* media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
